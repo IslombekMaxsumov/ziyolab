@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hujayra tuzilishi — ZiyoLab</title>
+<meta name="description" content="ZiyoLab virtual laboratoriyasida hujayra tuzilishi tajribasi — hujayra tuzilmalarini bosib, ularning vazifalari bilan tanishing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="kislota-ishqor.css">
+<link rel="stylesheet" href="hujayra.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html#home" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+          <rect x="6" y="5" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+          <rect x="6" y="22.6" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+          <path d="M23,9 A15,15 0 0,1 9,23 A15,15 0 0,1 23,9 Z" fill="#D9B85F"/>
+          <line x1="23" y1="9" x2="9" y2="23" stroke="#3C4F41" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">Ziyo<span class="accent">Lab</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Bosh sahifa</a>
+      <a href="ohm-qonuni.html">Laboratoriya</a>
+      <a href="index.html#subjects">Tajribalar</a>
+      <a href="index.html#stats">Natijalar</a>
+      <a href="index.html#haqida">Haqida</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="#cell" class="btn btn-primary btn-sm">Boshlash</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menyuni ochish" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="chem-page">
+
+  <!-- ===================== HEADER ===================== -->
+  <section class="ohm-header container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html#home">Bosh sahifa</a>
+      <span>/</span>
+      <a href="index.html#subjects">Laboratoriya</a>
+      <span>/</span>
+      <a href="index.html#subjects">Biologiya</a>
+      <span>/</span>
+      <span class="breadcrumb-current">Hujayra tuzilishi</span>
+    </nav>
+
+    <div class="ohm-header-top">
+      <h1>Hujayra tuzilishi</h1>
+      <span class="status-badge" id="statusBadge"><i class="status-dot"></i>Tajriba tayyor</span>
+    </div>
+    <p class="ohm-subtitle">Hujayra tuzilmalarini bosib, ularning vazifalari bilan tanishing.</p>
+  </section>
+
+  <!-- ===================== TAJRIBA HAQIDA ===================== -->
+  <section class="ohm-header container">
+    <h2 class="steps-title">Tajriba haqida</h2>
+    <div class="about-grid">
+      <div class="about-block">
+        <h4>Kelib chiqishi</h4>
+        <p>Hujayrani birinchi marta Robert Huk 17-asrda mikroskop yordamida kuzatgan. Keyinchalik bu kuzatishlar hujayra nazariyasining rivojlanishiga asos bo‘ldi.</p>
+      </div>
+      <div class="about-block">
+        <h4>Nima uchun kerak?</h4>
+        <p>Hujayralarni o‘rganish tirik organizmlarning qanday ishlashini tushunishga yordam beradi.</p>
+      </div>
+      <div class="about-block">
+        <h4>Haqiqiy hayotda</h4>
+        <p>Hujayra haqidagi bilimlar tibbiyot, genetika, kasalliklarni o‘rganish va biotexnologiyada keng qo‘llaniladi.</p>
+      </div>
+      <div class="about-block">
+        <h4>Asosiy g‘oya</h4>
+        <p>Yadro boshqaradi, membrana himoya qiladi, sitoplazma muhit yaratadi, mitoxondriya esa energiya ishlab chiqaradi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STEPS ===================== -->
+  <section class="ohm-steps container">
+    <span class="section-tag">Jarayon</span>
+    <h2 class="steps-title">Tajriba bosqichlari</h2>
+    <ol class="steps-list" id="stepsList">
+      <li data-step="1"><span class="step-num">1</span><span class="step-text">Hujayrani kuzating</span></li>
+      <li data-step="2"><span class="step-num">2</span><span class="step-text">Har birini bosing</span></li>
+      <li data-step="3"><span class="step-num">3</span><span class="step-text">Ma'lumotni o'qing</span></li>
+      <li data-step="4"><span class="step-num">4</span><span class="step-text">Xulosa chiqaring</span></li>
+    </ol>
+  </section>
+
+  <!-- ===================== WORKSPACE ===================== -->
+  <section class="ohm-workspace container" id="cell">
+
+    <!-- CELL DIAGRAM -->
+    <div class="circuit-card">
+      <div class="card-label">Hujayra modeli</div>
+      <div class="circuit-wrap cell-wrap">
+        <svg viewBox="0 0 400 360" class="cell-svg" aria-hidden="true">
+          <circle class="organelle cell-cytoplasm" data-organelle="sitoplazma" cx="200" cy="180" r="158"/>
+          <ellipse class="organelle cell-mito" data-organelle="mitoxondriya" cx="285" cy="245" rx="42" ry="24" transform="rotate(-25 285 245)"/>
+          <circle class="organelle cell-nucleus" data-organelle="yadro" cx="160" cy="150" r="58"/>
+          <circle class="cell-nucleus-dot" cx="145" cy="135" r="6"/>
+          <circle class="cell-nucleus-dot" cx="175" cy="160" r="4"/>
+          <circle class="organelle cell-membrane" data-organelle="membrana" cx="200" cy="180" r="152"/>
+        </svg>
+      </div>
+      <p class="circuit-caption">Tuzilmalardan birini bosib, uning vazifasi bilan tanishing</p>
+    </div>
+
+    <!-- INFO PANEL -->
+    <div class="controls-card">
+      <div class="card-label">Ma'lumot paneli</div>
+      <div class="info-window" id="infoWindow">
+        <h3 class="info-title" id="infoTitle">Tuzilmani tanlang</h3>
+        <p class="info-text" id="infoText">Chapdagi hujayra modelida biror tuzilmani (Yadro, Membrana, Sitoplazma yoki Mitoxondriya) bosing.</p>
+      </div>
+      <div class="legend-list">
+        <button type="button" class="legend-item" data-organelle="yadro"><span class="legend-dot dot-yadro"></span>Yadro</button>
+        <button type="button" class="legend-item" data-organelle="membrana"><span class="legend-dot dot-membrana"></span>Membrana</button>
+        <button type="button" class="legend-item" data-organelle="sitoplazma"><span class="legend-dot dot-sitoplazma"></span>Sitoplazma</button>
+        <button type="button" class="legend-item" data-organelle="mitoxondriya"><span class="legend-dot dot-mitoxondriya"></span>Mitoxondriya</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACTIONS ===================== -->
+  <section class="ohm-actions container">
+    <button type="button" class="btn btn-secondary" id="resetBtn">Tajribani qayta boshlash</button>
+    <button type="button" class="btn btn-primary" id="completeBtn">Tajribani yakunlash</button>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section class="ohm-results container hidden" id="resultsPanel">
+    <div class="results-card">
+      <span class="results-badge">Tajriba yakunlandi ✓</span>
+      <div class="results-grid">
+        <div class="result-tile">
+          <span class="measurement-label">Yadro</span>
+          <span class="measurement-value"><span id="checkYadro">—</span></span>
+        </div>
+        <div class="result-tile">
+          <span class="measurement-label">Membrana</span>
+          <span class="measurement-value"><span id="checkMembrana">—</span></span>
+        </div>
+        <div class="result-tile">
+          <span class="measurement-label">Sitoplazma</span>
+          <span class="measurement-value"><span id="checkSitoplazma">—</span></span>
+        </div>
+        <div class="result-tile">
+          <span class="measurement-label">Mitoxondriya</span>
+          <span class="measurement-value"><span id="checkMitoxondriya">—</span></span>
+        </div>
+      </div>
+      <p class="results-conclusion">Hujayra — tirik organizmning eng kichik tuzilishiy va funksional birligi. Yadro, membrana, sitoplazma va mitoxondriya birgalikda hujayra hayotini ta'minlaydi.</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section class="ohm-quiz container hidden" id="quizPanel">
+    <div class="section-head">
+      <span class="section-tag">Bilim testi</span>
+      <h2>Bilimingizni tekshiring</h2>
+    </div>
+    <div class="quiz-list" id="quizList"></div>
+    <div class="quiz-score hidden" id="quizScore"></div>
+    <div class="return-home">
+      <a href="index.html" class="btn btn-primary">Bosh sahifaga qaytish</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html#home" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+            <rect x="6" y="5" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+            <rect x="6" y="22.6" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+            <path d="M23,9 A15,15 0 0,1 9,23 A15,15 0 0,1 23,9 Z" fill="#D9B85F"/>
+            <line x1="23" y1="9" x2="9" y2="23" stroke="#3C4F41" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">Ziyo<span class="accent">Lab</span></span>
+      </a>
+      <p>Virtual tajriba laboratoriyasi — o‘quvchilar uchun zamonaviy ilmiy platforma. Xavfsiz, interaktiv va har doim mavjud.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Sahifalar</h4>
+      <a href="index.html#home">Bosh sahifa</a>
+      <a href="ohm-qonuni.html">Laboratoriya</a>
+      <a href="index.html#subjects">Tajribalar</a>
+      <a href="index.html#stats">Natijalar</a>
+      <a href="index.html#haqida">Haqida</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Ijtimoiy tarmoqlar</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 4L3 11.5L10 13.5M21 4L18 20L10 13.5M21 4L10 13.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="0.9" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.6 2 12.1C2 16.6 4.9 20.3 8.8 21.6C9.3 21.7 9.5 21.4 9.5 21.1V19.2C6.7 19.8 6.1 17.9 6.1 17.9C5.7 16.8 5.1 16.5 5.1 16.5C4.2 15.9 5.1 15.9 5.1 15.9C6.1 16 6.6 16.9 6.6 16.9C7.5 18.4 8.9 18 9.5 17.7C9.6 17 9.9 16.6 10.2 16.4C7.9 16.1 5.6 15.3 5.6 11.4C5.6 10.3 6 9.4 6.6 8.7C6.5 8.5 6.2 7.4 6.7 6C6.7 6 7.5 5.7 9.5 7.1C10.3 6.9 11.2 6.8 12 6.8C12.8 6.8 13.7 6.9 14.5 7.1C16.5 5.7 17.3 6 17.3 6C17.8 7.4 17.5 8.5 17.4 8.7C18 9.4 18.4 10.3 18.4 11.4C18.4 15.3 16.1 16.1 13.8 16.4C14.2 16.7 14.5 17.3 14.5 18.2V21.1C14.5 21.4 14.7 21.7 15.2 21.6C19.1 20.3 22 16.6 22 12.1C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ZiyoLab. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="hujayra.js"></script>
+</body>
+</html>

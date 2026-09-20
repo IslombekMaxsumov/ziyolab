@@ -1,0 +1,146 @@
+.cell-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cell-svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.organelle {
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease, stroke-width 0.25s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.organelle:hover {
+  filter: brightness(1.08);
+}
+
+.organelle.active {
+  filter: brightness(1.18);
+  transform: scale(1.045);
+}
+
+.cell-cytoplasm {
+  fill: rgba(73, 99, 79, 0.12);
+  stroke: none;
+}
+
+.cell-membrane {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 6;
+}
+
+.cell-membrane.active {
+  stroke: var(--yellow);
+  stroke-width: 8;
+}
+
+.cell-nucleus {
+  fill: var(--olive);
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.cell-nucleus.active {
+  stroke: var(--yellow);
+  stroke-width: 3;
+}
+
+.cell-nucleus-dot {
+  fill: rgba(32, 35, 31, 0.25);
+  pointer-events: none;
+}
+
+.cell-mito {
+  fill: var(--orange);
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.cell-mito.active {
+  stroke: var(--yellow);
+  stroke-width: 3;
+}
+
+.info-window {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 130px;
+}
+
+.info-window.anim {
+  animation: infoFade 0.35s ease;
+}
+
+@keyframes infoFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.info-text {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.legend-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--hairline-on-dark);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  color: var(--muted-on-dark);
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.legend-item:hover {
+  color: var(--text-on-dark);
+  border-color: rgba(243, 240, 232, 0.3);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-yadro { background: var(--olive); }
+.dot-membrana { background: var(--green); }
+.dot-sitoplazma { background: rgba(73, 99, 79, 0.5); }
+.dot-mitoxondriya { background: var(--orange); }
+
+@media (max-width: 560px) {
+  .legend-list {
+    grid-template-columns: 1fr;
+  }
+}

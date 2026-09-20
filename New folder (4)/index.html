@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZiyoLab — Virtual Tajriba Laboratoriyasi</title>
+<meta name="description" content="ZiyoLab — Virtual tajriba laboratoriyasi. Fizika, kimyo va biologiya bo‘yicha xavfsiz, interaktiv virtual tajribalar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mini-labs.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+          <rect x="6" y="5" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+          <rect x="6" y="22.6" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+          <path d="M23,9 A15,15 0 0,1 9,23 A15,15 0 0,1 23,9 Z" fill="#D9B85F"/>
+          <line x1="23" y1="9" x2="9" y2="23" stroke="#3C4F41" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">Ziyo<span class="accent">Lab</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Bosh sahifa</a>
+      <a href="ohm-qonuni.html">Laboratoriya</a>
+      <a href="#subjects">Tajribalar</a>
+      <a href="#stats">Natijalar</a>
+      <a href="#haqida">Haqida</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="#subjects" class="btn btn-primary btn-sm">Boshlash</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menyuni ochish" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Ilmiy raqamli platforma</span>
+        <h1>Virtual <span class="highlight">Tajriba</span> Laboratoriyasi</h1>
+        <p class="hero-text">
+          Fizika, kimyo va biologiya bo‘yicha tajribalarni xavfsiz virtual muhitda o‘tkazing.
+          O‘zgaruvchilarni sozlang, natijalarni real vaqtda kuzating va amaliyot orqali o‘rganing.
+        </p>
+        <p class="hero-slogan">Fanlarni faqat o‘qimang — tajriba qiling.</p>
+        <div class="hero-actions">
+          <a href="#subjects" class="btn btn-primary">Tajribani boshlash</a>
+          <a href="#subjects" class="btn btn-secondary">Tajribalarni ko‘rish</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="lab-panel">
+          <div class="lab-panel-header">
+            <div class="lab-dots"><span></span><span></span><span></span></div>
+            <span class="lab-panel-title">tajriba_interfeysi.exe</span>
+          </div>
+
+          <div class="lab-panel-body">
+            <div class="lab-metrics">
+              <div class="lab-metric">
+                <span class="lab-metric-label">Kuchlanish</span>
+                <span class="lab-metric-value">12.4<small>V</small></span>
+                <span class="lab-bar"><i style="width:62%"></i></span>
+              </div>
+              <div class="lab-metric">
+                <span class="lab-metric-label">Qarshilik</span>
+                <span class="lab-metric-value">220<small>Ω</small></span>
+                <span class="lab-bar"><i style="width:44%"></i></span>
+              </div>
+              <div class="lab-metric">
+                <span class="lab-metric-label">Tok kuchi</span>
+                <span class="lab-metric-value">0.056<small>A</small></span>
+                <span class="lab-bar"><i style="width:30%"></i></span>
+              </div>
+            </div>
+
+            <div class="lab-graph">
+              <svg viewBox="0 0 300 90" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="graphFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#D9B85F" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#D9B85F" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <polyline points="0,70 30,55 60,60 90,35 120,42 150,20 180,30 210,15 240,25 270,10 300,18" fill="none" stroke="#D9B85F" stroke-width="2"/>
+                <polygon points="0,70 30,55 60,60 90,35 120,42 150,20 180,30 210,15 240,25 270,10 300,18 300,90 0,90" fill="url(#graphFill)"/>
+              </svg>
+            </div>
+
+            <div class="lab-circuit">
+              <svg viewBox="0 0 300 60" preserveAspectRatio="none">
+                <rect x="6" y="24" width="10" height="14" rx="1.5" fill="none" stroke="#20231F" stroke-width="1.4"/>
+                <line x1="16" y1="31" x2="70" y2="31" stroke="#6F746B" stroke-width="1.4"/>
+                <path d="M70 31 L78 20 L86 42 L94 20 L102 42 L110 20 L118 31" fill="none" stroke="#20231F" stroke-width="1.4"/>
+                <line x1="118" y1="31" x2="290" y2="31" stroke="#6F746B" stroke-width="1.4"/>
+                <circle class="pulse-dot" cx="16" cy="31" r="3" fill="#C86B3D"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">12+</span>
+        <span class="stat-label">Virtual tajribalar</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Fan yo‘nalishi</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Xavfsiz muhit</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Foydalanish imkoniyati</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / VALUE ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Afzalliklar</span>
+        <h2>Nega Virtual Laboratoriya?</h2>
+        <p>Zamonaviy o‘quv jarayoni uchun xavfsiz, interaktiv va har doim ochiq bo‘lgan ilmiy muhit.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon accent-orange">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L5 6V11C5 15.4 8 19.3 12 21C16 19.3 19 15.4 19 11V6L12 3Z" stroke="#C86B3D" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15 9.5" stroke="#C86B3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Xavfsiz tajriba</h3>
+          <p>O‘quvchilar jismoniy laboratoriya xavflarisiz, to‘liq xavfsiz muhitda tajriba o‘tkazadilar.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6H14M4 12H20M4 18H10" stroke="#49634F" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="6" r="2" stroke="#49634F" stroke-width="1.5"/><circle cx="14" cy="18" r="2" stroke="#49634F" stroke-width="1.5"/></svg>
+          </span>
+          <h3>Interaktiv o‘rganish</h3>
+          <p>O‘zgaruvchilarni o‘zgartirib, natijalarni real vaqt rejimida darhol kuzatish mumkin.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5C4 18.1 5.1 17 6.5 17H20V4H6.5C5.1 4 4 5.1 4 6.5V19.5Z" stroke="#49634F" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 19.5C4 20.9 5.1 22 6.5 22H20V19" stroke="#49634F" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Amaliy bilim</h3>
+          <p>Nazariy tushunchalar amaliy tajribalar orqali osonroq va chuqurroq o‘zlashtiriladi.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="#49634F" stroke-width="1.5"/><path d="M12 7.5V12L15 14" stroke="#49634F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Har doim mavjud</h3>
+          <p>Virtual laboratoriyadan istalgan vaqtda, istalgan qurilmadan foydalanish mumkin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SUBJECTS ===================== -->
+  <section class="subjects" id="subjects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Yo‘nalishlar</span>
+        <h2>Fanlar bo‘yicha tajribalar</h2>
+        <p>O‘zingizga qiziq bo‘lgan fan yo‘nalishini tanlang va tajribani boshlang.</p>
+      </div>
+
+      <div class="subject-filters" id="subjectFilters">
+        <button type="button" class="filter-btn active" data-filter="all">Barchasi</button>
+        <button type="button" class="filter-btn" data-filter="physics">Fizika</button>
+        <button type="button" class="filter-btn" data-filter="chemistry">Kimyo</button>
+        <button type="button" class="filter-btn" data-filter="biology">Biologiya</button>
+      </div>
+
+      <div class="subjects-grid" id="subjectsGrid">
+        <article class="subject-card physics" data-subject="physics">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-physics">FIZIKA</span>
+            <span class="subject-difficulty">O‘rta</span>
+          </div>
+          <h3>Ohm qonuni</h3>
+          <p>Kuchlanish, qarshilik va tok kuchi orasidagi bog‘liqlikni interaktiv sxema orqali o‘rganing.</p>
+          <div class="subject-meta">
+            <span>⏱ 15 daqiqa</span>
+          </div>
+          <a href="ohm-qonuni.html" class="btn btn-outline subject-btn">Boshlash</a>
+        </article>
+
+        <article class="subject-card physics" data-subject="physics">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-physics">FIZIKA</span>
+            <span class="subject-difficulty">O‘rta</span>
+          </div>
+          <h3>Prujina va kuch</h3>
+          <p>Prujinaga ta’sir etuvchi kuch va uning cho‘zilishi orasidagi bog‘liqlikni o‘rganing.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="spring">Boshlash</button>
+        </article>
+
+        <article class="subject-card physics" data-subject="physics">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-physics">FIZIKA</span>
+            <span class="subject-difficulty">Murakkab</span>
+          </div>
+          <h3>Mayatnik harakati</h3>
+          <p>Mayatnik uzunligi va tebranish davri orasidagi bog‘liqlikni kuzating.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="pendulum">Boshlash</button>
+        </article>
+
+        <article class="subject-card chemistry" data-subject="chemistry">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-chemistry">KIMYO</span>
+            <span class="subject-difficulty">Boshlang‘ich</span>
+          </div>
+          <h3>Kislota va ishqor reaksiyasi</h3>
+          <p>Turli moddalarni aralashtirib, pH o‘zgarishi va reaksiya natijalarini kuzating.</p>
+          <div class="subject-meta">
+            <span>⏱ 10 daqiqa</span>
+          </div>
+          <a href="kislota-ishqor.html" class="btn btn-outline subject-btn">Boshlash</a>
+        </article>
+
+        <article class="subject-card chemistry" data-subject="chemistry">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-chemistry">KIMYO</span>
+            <span class="subject-difficulty">O‘rta</span>
+          </div>
+          <h3>Eritma konsentratsiyasi</h3>
+          <p>Erituvchi va erigan modda nisbatini o‘zgartirib, eritma konsentratsiyasini kuzating.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="concentration">Boshlash</button>
+        </article>
+
+        <article class="subject-card chemistry" data-subject="chemistry">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-chemistry">KIMYO</span>
+            <span class="subject-difficulty">Boshlang‘ich</span>
+          </div>
+          <h3>Zichlik tajribasi</h3>
+          <p>Turli moddalarning massasi va hajmi orqali zichligini hisoblab, taqqoslang.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="density">Boshlash</button>
+        </article>
+
+        <article class="subject-card biology" data-subject="biology">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-biology">BIOLOGIYA</span>
+            <span class="subject-difficulty">Boshlang‘ich</span>
+          </div>
+          <h3>Hujayra tuzilishi</h3>
+          <p>Hujayra organellalarini interaktiv model orqali kuzating va vazifalarini o‘rganing.</p>
+          <div class="subject-meta">
+            <span>⏱ 12 daqiqa</span>
+          </div>
+          <a href="hujayra-tuzilishi.html" class="btn btn-outline subject-btn">Boshlash</a>
+        </article>
+
+        <article class="subject-card biology" data-subject="biology">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-biology">BIOLOGIYA</span>
+            <span class="subject-difficulty">O‘rta</span>
+          </div>
+          <h3>Diffuziya</h3>
+          <p>Zarrachalarning yuqori konsentratsiyadan past konsentratsiyaga tarqalishini kuzating.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="diffusion">Boshlash</button>
+        </article>
+
+        <article class="subject-card biology" data-subject="biology">
+          <span class="badge-interactive">Interaktiv</span>
+          <div class="subject-top">
+            <span class="subject-label label-biology">BIOLOGIYA</span>
+            <span class="subject-difficulty">Boshlang‘ich</span>
+          </div>
+          <h3>Oziqa zanjiri</h3>
+          <p>Organizmlarni to‘g‘ri tartibda joylashtirib, energiya oqimi zanjirini tuzing.</p>
+          <div class="subject-meta">
+            <span>⏱ 5 daqiqa</span>
+          </div>
+          <button type="button" class="btn btn-outline subject-btn" data-mini="foodchain">Boshlash</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ilmni kuzatmang — uni <span class="highlight-accent">sinab ko‘ring</span>.</h2>
+      <p>Virtual laboratoriyaga kiring, tajribalarni o‘z qo‘lingiz bilan boshqaring va fanni amalda his qiling.</p>
+      <a href="#subjects" class="btn btn-primary btn-lg">Laboratoriyaga kirish</a>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="haqida">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+            <rect x="6" y="5" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+            <rect x="6" y="22.6" width="20" height="4.4" rx="1.5" fill="#F3F0E8"/>
+            <path d="M23,9 A15,15 0 0,1 9,23 A15,15 0 0,1 23,9 Z" fill="#D9B85F"/>
+            <line x1="23" y1="9" x2="9" y2="23" stroke="#3C4F41" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">Ziyo<span class="accent">Lab</span></span>
+      </a>
+      <p>Virtual tajriba laboratoriyasi — o‘quvchilar uchun zamonaviy ilmiy platforma. Xavfsiz, interaktiv va har doim mavjud.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Sahifalar</h4>
+      <a href="#home">Bosh sahifa</a>
+      <a href="ohm-qonuni.html">Laboratoriya</a>
+      <a href="#subjects">Tajribalar</a>
+      <a href="#stats">Natijalar</a>
+      <a href="#haqida">Haqida</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Ijtimoiy tarmoqlar</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 4L3 11.5L10 13.5M21 4L18 20L10 13.5M21 4L10 13.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="0.9" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.6 2 12.1C2 16.6 4.9 20.3 8.8 21.6C9.3 21.7 9.5 21.4 9.5 21.1V19.2C6.7 19.8 6.1 17.9 6.1 17.9C5.7 16.8 5.1 16.5 5.1 16.5C4.2 15.9 5.1 15.9 5.1 15.9C6.1 16 6.6 16.9 6.6 16.9C7.5 18.4 8.9 18 9.5 17.7C9.6 17 9.9 16.6 10.2 16.4C7.9 16.1 5.6 15.3 5.6 11.4C5.6 10.3 6 9.4 6.6 8.7C6.5 8.5 6.2 7.4 6.7 6C6.7 6 7.5 5.7 9.5 7.1C10.3 6.9 11.2 6.8 12 6.8C12.8 6.8 13.7 6.9 14.5 7.1C16.5 5.7 17.3 6 17.3 6C17.8 7.4 17.5 8.5 17.4 8.7C18 9.4 18.4 10.3 18.4 11.4C18.4 15.3 16.1 16.1 13.8 16.4C14.2 16.7 14.5 17.3 14.5 18.2V21.1C14.5 21.4 14.7 21.7 15.2 21.6C19.1 20.3 22 16.6 22 12.1C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ZiyoLab. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+<!-- ===================== MINI EXPERIMENT MODAL ===================== -->
+<div class="mini-modal" id="miniModal" aria-hidden="true">
+  <div class="mini-modal-overlay" id="miniModalOverlay"></div>
+  <div class="mini-modal-panel" role="dialog" aria-modal="true" aria-label="Mini tajriba">
+    <button type="button" class="mini-modal-close" id="miniModalClose" aria-label="Yopish">✕</button>
+    <div class="mini-modal-body" id="miniModalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="mini-labs.js"></script>
+</body>
+</html>
